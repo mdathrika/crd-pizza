@@ -1,0 +1,7 @@
+domain: foodie.io
+repo: resturant
+resources:
+- group: resturant
+  kind: Pizza
+  version: v1
+version: "2"

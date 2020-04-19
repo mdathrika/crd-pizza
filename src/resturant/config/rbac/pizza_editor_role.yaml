@@ -1,0 +1,24 @@
+# permissions for end users to edit pizzas.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pizza-editor-role
+rules:
+- apiGroups:
+  - resturant.foodie.io
+  resources:
+  - pizzas
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - resturant.foodie.io
+  resources:
+  - pizzas/status
+  verbs:
+  - get
